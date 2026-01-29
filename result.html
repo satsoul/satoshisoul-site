@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Preuve Générée : Télécharge ton Certificat</title>
+  <meta name="description" content="Ta preuve d'humanité SatoshiSoul est générée. Télécharge ton certificat PDF et badge unique. Vérifie sur Bitcoin. Be Real. Stay Free.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 60px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .logo-video {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .info {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 16px;
+      margin: 30px 0;
+      text-align: left;
+    }
+    .info strong {
+      color: var(--gold);
+    }
+    .badge {
+      margin: 40px 0;
+    }
+    .badge img {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.6);
+    }
+    .btn {
+      display: inline-block;
+      padding: 20px 60px;
+      background: var(--gold);
+      color: black;
+      font-weight: 800;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.4s;
+      box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
+      margin: 20px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(247, 147, 26, 0.6);
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .back {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    a {
+      color: #f7931a !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    a:visited {
+      color: #e07b00 !important;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .logo-video {
+        width: 250px !important;
+      }
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      .btn {
+        padding: 18px 50px;
+        font-size: 1.2rem;
+      }
+      .container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+    <h1>Preuve d’Âme Générée !</h1>
+
+    <p><strong>Dernière mise à jour : 21 décembre 2025</strong></p>
+
+    <h2>Félicitations !</h2>
+    <p>
+      Ta preuve d'humanité est maintenant éternelle sur Bitcoin. Voici tes infos :
+    </p>
+
+    <div class="info">
+      <p><strong>Pseudonyme :</strong> <span id="pseudo">Anonyme</span></p>
+      <p><strong>Hash unique :</strong> <span id="hash">exemplehash123...</span></p>
+      <p><strong>Date de preuve :</strong> <span id="date">23 décembre 2025</span></p>
+      <p><strong>Transaction Bitcoin :</strong> <a href="#" id="txlink" target="_blank">Voir sur mempool.space</a></p>
+      <p id="signature-status" style="display: none; color: var(--gold); font-weight: 600;">
+        Statut : <span style="color: #fff;">Signer Certifié</span> (Signature numérique activée)
+      </p>
+    </div>
+
+    <div class="badge">
+      <img src="assets/badge-dore.png" alt="Ton Badge Soul ID – Preuve d’Humanité Souveraine" id="badge-preview">
+    </div>
+
+    <button class="btn" onclick="generatePDF()">Télécharger Certificat PDF ⚡</button>
+
+    <p>
+      <span class="highlight">Conseil :</span> Partage ton badge sur X ou Telegram ! Pour prouver c'est vraiment toi, utilise le mode avancé <a href="signature.html">Signature Numérique</a>.
+    </p>
+
+    <p>
+      Vérifie ta preuve sur <a href="verify.html">notre outil de vérification</a>. Voir notre <a href="privacy.html">Privacy</a> et <a href="cgu.html">CGU</a>.
+    </p>
+
+    <div style="margin: 60px auto; padding: 30px; background: rgba(247, 147, 26, 0.1); border-radius: 16px; max-width: 700px;">
+      <h2 style="color: var(--gold); margin-bottom: 20px;">Déjà un Soul ID ?</h2>
+      <p style="font-size: 1.3rem; margin-bottom: 30px;">
+        Débloque la signature numérique avancée pour seulement <strong>3 €</strong>.<br>
+        Prouve que c’est vraiment toi – à vie.
+      </p>
+      <a href="upgrade.html" class="btn" style="padding: 18px 50px; font-size: 1.3rem;">
+        UPGRADE NOW – 3 €
+      </a>
+    </div>
+
+    <p>
+      Be Real. Stay Free. 🚀
+    </p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <script>
+    const { jsPDF } = window.jspdf;
+
+    function generatePDF() {
+      const pseudo = document.getElementById('pseudo').textContent;
+      const hash = document.getElementById('hash').textContent;
+      const date = document.getElementById('date').textContent;
+      const txid = document.getElementById('txlink').href.split('/').pop();
+      const badgePath = document.getElementById('badge-preview').src;
+
+      const doc = new jsPDF();
+      doc.setFillColor(15, 23, 42);
+      doc.rect(0, 0, 210, 297, 'F');
+
+      doc.addImage("assets/logo-principal.png", "PNG", 70, 20, 70, 70);
+      doc.addImage(badgePath, "PNG", 70, 100, 70, 70);
+
+      doc.setFontSize(20);
+      doc.setTextColor(247, 147, 26);
+      doc.text("CERTIFICAT D'AUTHENTICITÉ", 105, 180, { align: "center" });
+      doc.text("SATOSHISOUL", 105, 190, { align: "center" });
+
+      doc.setFontSize(12);
+      doc.setTextColor(226, 232, 240);
+      doc.text(`Pseudonyme : ${pseudo}`, 20, 210);
+      doc.text(`Hash unique : ${hash}`, 20, 220);
+      doc.text(`Date de preuve : ${date}`, 20, 230);
+      doc.text(`Transaction Bitcoin : ${txid}`, 20, 240);
+
+      // Ajout du statut Signer Certifié dans le PDF si activé
+      if (document.getElementById('signature-status').style.display === 'block') {
+        doc.setTextColor(247, 147, 26);
+        doc.text("Signer Certifié – Signature numérique activée", 20, 250);
+      }
+
+      doc.text("Cette preuve est éternellement ancrée sur Bitcoin.", 20, 260);
+      doc.text("Vérifiable par quiconque via blockchain explorers.", 20, 270);
+
+      doc.line(20, 280, 190, 280);
+
+      doc.setFontSize(9);
+      doc.setTextColor(100, 100, 100);
+      doc.text("SatoshiSoul.org – Verified on Bitcoin", 105, 290, { align: "center" });
+
+      doc.save(`Certificat_SatoshiSoul_${pseudo}.pdf`);
+    }
+
+    // Valeurs de test (remplace par réelles lors de la génération)
+    document.getElementById('pseudo').textContent = "Anonyme";
+    document.getElementById('hash').textContent = "abc123def456...";
+    document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR');
+    document.getElementById('txlink').href = "https://mempool.space/tx/exempletxid123";
+    document.getElementById('badge-preview').src = "assets/badge-dore.png";
+
+    // Pour afficher "Signer Certifié" (change manuellement true/false pour chaque certificat)
+    const isCertified = false; // ← Mets true si l'utilisateur a upgradé la signature
+    if (isCertified) {
+      document.getElementById('signature-status').style.display = 'block';
+    }
+  </script>
+
+  <footer>
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    Open-source : <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    Mirror IPFS : <a href="https://ipfs.io/ipfs/[TON_CID_IPFS]" target="_blank">ipfs.io/ipfs/[CID]</a><br>
+    <a href="about.html">À Propos</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="faq.html">FAQ</a> • 
+    <a href="roadmap.html">Roadmap</a> • 
+    <a href="whitepaper.html">White Paper</a> • 
+    <a href="charte-ethique.html">Charte Éthique</a> • 
+    <a href="privacy.html">Politique de Confidentialité</a> • 
+    <a href="cgu.html">CGU</a> • 
+    <a href="heritage.html">Héritage</a> • 
+    <a href="anti-fraud.html">Politique Anti-Fraude</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    DDoS Protected by Netlify & Cloudflare<br>
+    SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n'est affilié à aucune institution publique.<br>
+    SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
+    L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
+    <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
+    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
+  </footer>
+</body>
+</html>

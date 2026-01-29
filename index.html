@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Be Real. Stay Free.</title>
+  <meta name="description" content="SatoshiSoul : Prouve ton existence humaine réelle sur Bitcoin en 90 secondes. Anonyme, éternel, privacy-first. Sans KYC ni biométrie. Rejoins-nous !">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 80px;
+    }
+    .logo-video {
+      width: 350px;
+      max-width: 90%;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    .slogan {
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 60px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 20px 60px;
+      margin: 20px;
+      background: var(--gold);
+      color: black;
+      font-weight: 800;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.4s;
+      box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
+    }
+    .btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(247, 147, 26, 0.6);
+    }
+    .btn-donate {
+      background: #444;
+    }
+    .glass-card {
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 50px;
+      margin: 40px auto;
+      max-width: 900px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .note-small {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+    footer {
+      margin-top: auto;
+      padding: 40px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      width: 100%;
+    }
+    footer a {
+      color: #f7931a !important;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    footer a:visited {
+      color: #e07b00 !important;
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .logo-video {
+        width: 250px !important;
+      }
+      .slogan {
+        font-size: 1.6rem !important;
+      }
+      .btn {
+        padding: 18px 50px;
+        font-size: 1.2rem;
+      }
+      .glass-card {
+        padding: 40px 20px;
+      }
+      footer {
+        padding: 30px 20px;
+        font-size: 0.8rem;
+      }
+      footer p {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+    <p class="slogan">BE REAL. STAY FREE.</p>
+  </header>
+
+  <div class="glass-card">
+    <h2 style="color: var(--gold); font-size: 2.2rem; margin-bottom: 30px;">
+      Crée ta Preuve d’Âme Souveraine
+    </h2>
+    <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 40px;">
+      En 90 secondes, prouve ton existence réelle sur Bitcoin.<br>
+      <span class="highlight">Sans biométrie. Sans KYC. Éternel et souverain.</span>
+    </p>
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">
+      Prix : <span style="color: var(--gold); font-weight: 700;">3 € (~6000 sats – ajusté tous les 15 jours)</span>
+    </p>
+    <a href="proof.html" class="btn">Commencer la Preuve 🚀</a>
+    <p class="note-small">100% Bitcoin-native pour souveraineté éternelle. Pas de fiat direct – contact pour institutions.</p>
+  </div>
+
+  <div class="glass-card">
+    <h2 style="color: var(--gold);">Soutenir le Projet</h2>
+    <p style="margin: 30px 0; line-height: 2;">
+      SatoshiSoul est 100% communautaire.<br>
+      Vos dons financent le développement et l’accès gratuit pour les exclus.
+    </p>
+    <a href="donate.html" class="btn btn-donate">Faire un Don Volontaire ❤️</a>
+  </div>
+
+  <div class="glass-card">
+    <h2 style="color: var(--gold);">Tes Badges Soul ID</h2>
+    <p style="margin-bottom: 30px;">
+      Trois types de badges pour tous : individus, institutions, et early adopters.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin: 40px 0;">
+      <div style="text-align: center;">
+        <img src="assets/badge-dore.png" alt="Badge Individu Doré – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <p style="margin-top: 15px; font-weight: bold;">Badge Individu (Doré)</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="assets/badge-bleu.png" alt="Badge Institution Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <p style="margin-top: 15px; font-weight: bold;">Badge Institution (Bleu)</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="assets/badge-dore-bleu.png" alt="Badge Early Doré-Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <p style="margin-top: 15px; font-weight: bold;">Badge Early (Doré-Bleu)</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    Open-source : <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    Mirror IPFS : <a href="https://ipfs.io/ipfs/[TON_CID_IPFS]" target="_blank">ipfs.io/ipfs/[CID]</a><br>
+    <a href="about.html">À Propos</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="faq.html">FAQ</a> • 
+    <a href="roadmap.html">Roadmap</a> • 
+    <a href="whitepaper.html">White Paper</a> • 
+    <a href="charte-ethique.html">Charte Éthique</a> • 
+    <a href="privacy.html">Politique de Confidentialité</a> • 
+    <a href="cgu.html">CGU</a> • 
+    <a href="heritage.html">Héritage</a> • 
+    <a href="anti-fraud.html">Politique Anti-Fraude</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    DDoS Protected by Netlify & Cloudflare<br>
+    SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n'est affilié à aucune institution publique.<br>
+    SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
+    L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
+    <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
+    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
+  </footer>
+</body>
+</html>

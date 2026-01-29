@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Roadmap (Plan de Développement)</title>
+  <meta name="description" content="Roadmap SatoshiSoul : Phase 1 manuel, Phase 2 automatisation IA, Phase 3 gouvernance DAO. Projet open-source pour preuves d'humanité sur Bitcoin. Be Real. Stay Free.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 60px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .logo-video {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    ul {
+      text-align: left;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      padding-left: 40px;
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .back {
+      display: block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    a {
+      color: #f7931a !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    a:visited {
+      color: #e07b00 !important;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .logo-video {
+        width: 250px !important;
+      }
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      .container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+    <h1>Roadmap SatoshiSoul</h1>
+
+    <p><strong>Dernière mise à jour : 21 décembre 2025</strong></p>
+
+    <p>
+      SatoshiSoul est un projet communautaire. Cette roadmap est votée par la communauté (1 Soul = 1 Vote). Voici les grandes étapes :
+    </p>
+
+    <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; margin: 20px 0;">
+      <h2>Phase 1 – Lancement MVP (Q4 2025 – en cours)</h2>
+      <ul>
+        <li>Validation manuelle des preuves</li>
+        <li>Formulaire Tally + paiement Lightning</li>
+        <li>Badges générés (doré, bleu, doré-bleu)</li>
+        <li>Certificat PDF + ZIP</li>
+        <li>Site statique sur Netlify</li>
+        <li>Politique anti-fraude + privacy by design</li>
+      </ul>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; margin: 20px 0;">
+      <h2>Phase 2 – Automatisation & IA (Q1–Q2 2026)</h2>
+      <ul>
+        <li>Vérification vidéo auto avec DeepFace (anti-deepfake)</li>
+        <li>Génération automatique badge + PDF + ZIP</li>
+        <li>Intégration n8n ou Zapier (soumission → email auto)</li>
+        <li>Mode signature numérique (wallet BTC)</li>
+        <li>Page verify.html pour vérification publique</li>
+        <li>API simple pour partenaires (ex : ONG)</li>
+      </ul>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; margin: 20px 0;">
+      <h2>Phase 3 – Gouvernance & Héritage (Q3 2026+)</h2>
+      <ul>
+        <li>DAO communautaire (1 Soul = 1 Vote)</li>
+        <li>Dead Man Switch Bitcoin (héritage automatique)</li>
+        <li>Badges NFT optionnels (Ordinals BTC)</li>
+        <li>Partenariats institutionnels & pilotes ONG</li>
+        <li>Extension multi-chain (si Bitcoin évolue)</li>
+      </ul>
+    </div>
+
+    <p>
+      Tu veux influencer la roadmap ? Rejoins notre <a href="https://discord.gg/your-invite" target="_blank">Discord</a> ou <a href="donate.html">soutiens-nous</a>.
+    </p>
+
+    <p>
+      Be Real. Stay Free. 🚀
+    </p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <footer>
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    Open-source : <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    Mirror IPFS : <a href="https://ipfs.io/ipfs/[TON_CID_IPFS]" target="_blank">ipfs.io/ipfs/[CID]</a><br>
+    <a href="about.html">À Propos</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="faq.html">FAQ</a> • 
+    <a href="roadmap.html">Roadmap</a> • 
+    <a href="whitepaper.html">White Paper</a> • 
+    <a href="charte-ethique.html">Charte Éthique</a> • 
+    <a href="privacy.html">Politique de Confidentialité</a> • 
+    <a href="cgu.html">CGU</a> • 
+    <a href="heritage.html">Héritage</a> • 
+    <a href="anti-fraud.html">Politique Anti-Fraude</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    DDoS Protected by Netlify & Cloudflare<br>
+    SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n'est affilié à aucune institution publique.<br>
+    SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
+    L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
+    <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
+    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
+  </footer>
+</body>
+</html>

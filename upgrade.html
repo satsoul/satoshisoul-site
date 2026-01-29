@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Upgrade Signature Numérique</title>
+  <meta name="description" content="Tu as déjà un Soul ID ? Débloque la signature numérique avancée pour seulement 3 €. Prouve que c’est vraiment toi. Be Real. Stay Free.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 60px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .logo-video {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin: 40px 0 20px;
+    }
+    ul {
+      text-align: left;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 20px 60px;
+      background: var(--gold);
+      color: black;
+      font-weight: 800;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
+      transition: all 0.4s;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(247, 147, 26, 0.6);
+    }
+    .back {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 40px;
+      display: block;
+    }
+    a {
+      color: #f7931a !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    a:visited {
+      color: #e07b00 !important;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 40px 20px; }
+      h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+
+    <h1>Upgrade ton Soul ID</h1>
+
+    <h2>Débloque la signature numérique avancée</h2>
+
+    <p style="font-size: 1.4rem; margin-bottom: 30px;">
+      Tu as déjà une preuve d'âme ? Ajoute la puissance de la signature cryptographique pour seulement <strong>3 €</strong>.
+    </p>
+
+    <ul>
+      <li>Prouve que c’est vraiment toi en signant n’importe quel message (Telegram, contrats, etc.)</li>
+      <li>Badge mis à jour avec le statut « Signer Certifié » (orange spécial)</li>
+      <li>Nouveau certificat PDF + instructions simples</li>
+      <li>Paiement Lightning rapide et sécurisé</li>
+      <li>Activation à vie – sans abonnement</li>
+    </ul>
+
+    <a href="TON_LIEN_TALLY_UPGRADE" class="btn" target="_blank">UPGRADE NOW – 3 €</a>
+
+    <p style="margin-top: 20px; font-size: 1.1rem;">
+      Besoin d’aide ou d’un devis institutionnel ? <a href="contact.html">Contacte-nous</a>.
+    </p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <footer style="margin-top: auto; padding: 40px; color: #94a3b8; font-size: 0.9rem;">
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    Be Real. Stay Free. 🚀</p>
+  </footer>
+</body>
+</html>

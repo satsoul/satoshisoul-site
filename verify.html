@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Vérifier une Preuve</title>
+  <meta name="description" content="Vérifie ta preuve d'humanité SatoshiSoul sur la blockchain Bitcoin. Colle ton TxID et vois si elle est valide et éternelle. Be Real. Stay Free.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 60px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .logo-video {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    input {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid var(--gold);
+      color: var(--text);
+      padding: 15px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+    button {
+      background: var(--gold);
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s;
+      box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
+    }
+    button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(247, 147, 26, 0.6);
+    }
+    #result {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 16px;
+      display: none;
+      font-size: 1.2rem;
+    }
+    .back {
+      display: block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    a {
+      color: #f7931a !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    a:visited {
+      color: #e07b00 !important;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .logo-video {
+        width: 250px !important;
+      }
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      .container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+    <h1>Vérifier une Preuve SatoshiSoul</h1>
+
+    <p>
+      Colle le TxID (hash de paiement) fourni dans ton certificat.<br>
+      Tu verras immédiatement si ta preuve est valide et éternelle sur Bitcoin.
+    </p>
+
+    <input type="text" id="txid" placeholder="Colle ton TxID ici... (ex : abc123def456...)">
+    <button onclick="checkTx()">VÉRIFIER SUR LA BLOCKCHAIN</button>
+
+    <div id="result"></div>
+
+    <div style="margin: 60px auto; padding: 30px; background: rgba(247, 147, 26, 0.1); border-radius: 16px; max-width: 700px;">
+      <h2 style="color: var(--gold); margin-bottom: 20px;">Déjà un Soul ID ?</h2>
+      <p style="font-size: 1.3rem; margin-bottom: 30px;">
+        Débloque la signature numérique avancée pour seulement <strong>3 €</strong>.<br>
+        Prouve que c’est vraiment toi – à vie.
+      </p>
+      <a href="upgrade.html" class="btn" style="padding: 18px 50px; font-size: 1.3rem;">
+        UPGRADE NOW – 3 €
+      </a>
+    </div>
+
+    <p style="margin-top: 40px;">
+      Pas encore de preuve ? <a href="proof.html">Commence maintenant</a>.
+    </p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <script>
+    function checkTx() {
+      const tx = document.getElementById('txid').value.trim();
+      const res = document.getElementById('result');
+
+      if (tx.length < 10) {
+        res.style.display = "block";
+        res.innerHTML = "❌ TxID trop court. Vérifie ton certificat.";
+        return;
+      }
+
+      res.style.display = "block";
+      res.innerHTML = "🔍 Recherche sur la blockchain Bitcoin...";
+
+      // Redirection vers mempool.space (simple et fiable)
+      setTimeout(() => {
+        window.open('https://mempool.space/tx/' + tx, '_blank');
+        res.innerHTML = `
+          <strong style="color: var(--gold);">✅ Vérification en cours</strong><br><br>
+          Si la transaction apparaît sur mempool.space, ta preuve est valide et éternelle.<br>
+          <a href="https://mempool.space/tx/${tx}" target="_blank" style="color: var(--gold);">Ouvrir la transaction maintenant</a>
+        `;
+      }, 1500);
+    }
+
+    // Si TxID dans l'URL (ex : verify.html?txid=abc123)
+    const urlParams = new URLSearchParams(window.location.search);
+    const txParam = urlParams.get('txid');
+    if (txParam) {
+      document.getElementById('txid').value = txParam;
+      checkTx();
+    }
+  </script>
+
+  <footer>
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    Open-source : <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    Mirror IPFS : <a href="https://ipfs.io/ipfs/[TON_CID_IPFS]" target="_blank">ipfs.io/ipfs/[CID]</a><br>
+    <a href="about.html">À Propos</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="faq.html">FAQ</a> • 
+    <a href="roadmap.html">Roadmap</a> • 
+    <a href="whitepaper.html">White Paper</a> • 
+    <a href="charte-ethique.html">Charte Éthique</a> • 
+    <a href="privacy.html">Politique de Confidentialité</a> • 
+    <a href="cgu.html">CGU</a> • 
+    <a href="heritage.html">Héritage</a> • 
+    <a href="anti-fraud.html">Politique Anti-Fraude</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    DDoS Protected by Netlify & Cloudflare<br>
+    SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n'est affilié à aucune institution publique.<br>
+    SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
+    L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
+    <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
+    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
+  </footer>
+</body>
+</html>

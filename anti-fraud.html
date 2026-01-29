@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatoshiSoul – Politique Anti-Fraude</title>
+  <meta name="description" content="Politique anti-fraude de SatoshiSoul : Un badge par humain réel. Détails sur la détection des doublons et le traitement temporaire des données biométriques. Be Real. Stay Free.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/petit-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/petit-logo.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.7);
+      --gold: #f7931a;
+      --text: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 60px;
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .logo-video {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .back {
+      display: block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    a {
+      color: #f7931a !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #ffaa3d !important;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+    a:visited {
+      color: #e07b00 !important;
+    }
+    @keyframes pulse-glow {
+      from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
+      to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
+    }
+    @media (max-width: 768px) {
+      .logo-video {
+        width: 250px !important;
+      }
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      .container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video autoplay muted loop playsinline class="logo-video">
+      <source src="assets/logo-anim.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
+    </video>
+    <h1>🔒 Politique Anti-Fraude & Badge Unique</h1>
+
+    <p><strong>Dernière mise à jour : 21 décembre 2025</strong></p>
+
+    <h2>Pourquoi cette politique ?</h2>
+    <p>
+      SatoshiSoul est conçu pour être <span class="highlight">juste et unique</span> : une preuve d'humanité par personne réelle. Cette politique empêche les abus (multi-comptes, deepfakes) tout en respectant ta privacy. Nous sommes transparents : tout est expliqué ici.
+    </p>
+
+    <h2>Règles principales</h2>
+    <p>
+      🔒 SatoshiSoul autorise <span class="highlight">UN SEUL (1) badge par être humain</span>.<br>
+      Créer plusieurs badges est considéré comme fraude et entraîne un ban permanent ainsi que la perte du paiement (3 € ou montant équivalent).
+    </p>
+
+    <h2>Comment nous détectons les doublons</h2>
+    <p>
+      🔒 Nous utilisons un vecteur mathématique temporaire (empreinte faciale anonyme, ~512 nombres) pour vérifier que tu es humain et prévenir les doublons.<br>
+      Ce vecteur est considéré comme donnée biométrique (RGPD, loi 259-FZ).<br><br>
+      <span class="highlight">Nous STOCKONS ce vecteur temporairement (24 heures maximum, en mémoire uniquement) pour anti-fraude, puis nous le SUPPRIMONS définitivement.</span><br>
+      Nous NE STOCKONS JAMAIS ta vidéo brute ou ton image.
+    </p>
+    <p>
+      Exemple : Si tu essaies de créer un deuxième badge avec le même visage, nous le détectons et refusons (sans remboursement des 3 €).
+    </p>
+
+    <h2>Tes droits</h2>
+    <p>
+      🔒 En cochant la case dans le formulaire, tu consents explicitement à ce traitement temporaire.<br>
+      Tu as le droit à la suppression : contacte-nous à <a href="mailto:satsoul@proton.me">satsoul@proton.me</a> pour effacer toute trace (sauf le hash public sur Bitcoin, éternel par design).<br>
+      Voir aussi notre <a href="privacy.html">Politique de Confidentialité</a> et <a href="cgu.html">CGU</a>.
+    </p>
+
+    <p>
+      Si tu as des questions ou un problème, <a href="contact.html">contacte-nous</a>. Nous sommes là pour aider.
+    </p>
+
+    <p>
+      Be Real. Stay Free. 🚀
+    </p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <footer>
+    © 2025 SatoshiSoul Labs • Distributed entity • Open-source experimental project<br>
+    Open-source : <a href="https://github.com/satsoul" target="_blank">github.com/satsoul</a> • 
+    Mirror IPFS : <a href="https://ipfs.io/ipfs/[TON_CID_IPFS]" target="_blank">ipfs.io/ipfs/[CID]</a><br>
+    <a href="about.html">À Propos</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="faq.html">FAQ</a> • 
+    <a href="roadmap.html">Roadmap</a> • 
+    <a href="whitepaper.html">White Paper</a> • 
+    <a href="charte-ethique.html">Charte Éthique</a> • 
+    <a href="privacy.html">Politique de Confidentialité</a> • 
+    <a href="cgu.html">CGU</a> • 
+    <a href="heritage.html">Héritage</a> • 
+    <a href="anti-fraud.html">Politique Anti-Fraude</a> • 
+    <a href="https://discord.gg/your-invite" target="_blank">Discord</a><br>
+    <p>No Tracking – Privacy First<br>
+    DDoS Protected by Netlify & Cloudflare<br>
+    SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n'est affilié à aucune institution publique.<br>
+    SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
+    L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
+    <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
+    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
+  </footer>
+</body>
+</html>
