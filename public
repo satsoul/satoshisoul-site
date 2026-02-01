@@ -1,0 +1,4 @@
+cd MonProjet            # dans ton répertoire de projet
+git add .              # ajouter tous les changements (le nouveau dossier public + le déplacement)
+git commit -m "Ajout du dossier public avec les fichiers statiques"
+git push origin main   # pousser vers GitHub
