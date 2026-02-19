@@ -1,1 +1,1 @@
-assets/README.txt
+assets folder
