@@ -37,8 +37,8 @@
       border: 1px solid rgba(247, 147, 26, 0.2);
     }
     .logo-video {
-      width: 300px;
-      max-width: 90%;
+      max-width: 320px;
+      width: 100%;
       margin-bottom: 30px;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
@@ -99,22 +99,16 @@
       to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
     }
     @media (max-width: 768px) {
-      .logo-video {
-        width: 250px !important;
-      }
-      h1 {
-        font-size: 2.5rem !important;
-      }
-      .container {
-        padding: 40px 20px;
-      }
+      .logo-video { width: 250px !important; }
+      h1 { font-size: 2.5rem !important; }
+      .container { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <video autoplay muted loop playsinline class="logo-video">
-      <source src="assets/logo-anim.mp4" type="video/mp4">
+    <video controls autoplay muted loop playsinline preload="metadata" class="logo-video">
+      <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
     <h1>Roadmap SatoshiSoul</h1>
@@ -168,6 +162,15 @@
       Be Real. Stay Free. 🚀
     </p>
 
+    <!-- AJOUT DU LIEN WHITE PAPER -->
+    <div class="glass-card">
+      <h2 style="color: var(--gold);">White Paper</h2>
+      <p style="margin-bottom: 20px;">
+        Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
+      </p>
+      <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
+    </div>
+
     <a href="index.html" class="back">← Retour à l'accueil</a>
   </div>
 
@@ -192,8 +195,4 @@
     SatoshiSoul n’est pas un service financier ni un actif d’investissement.<br>
     L'utilisation du service implique l'acceptation des risques liés aux technologies blockchain. Service fourni "en l'état". No liability for blockchain risks or any damages arising from use.<br>
     <strong>Juridiction :</strong> Distributed Entity. No physical office. Operates under international law of digital assets.<br>
-    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (1 Soul = 1 Vote) or via Bitcoin blockchain arbitration.<br>
-    Pour paiements institutionnels fiat : contact satsoul@proton.me</p>
-  </footer>
-</body>
-</html>
+    <strong>Dispute Resolution :</strong> Any dispute shall be resolved by community vote (
