@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,8 +38,8 @@
       margin-bottom: 80px;
     }
     .logo-video {
-      width: 350px;
-      max-width: 90%;
+      max-width: 320px;
+      width: 100%;
       margin-bottom: 40px;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
@@ -136,8 +142,8 @@
 </head>
 <body>
   <header>
-    <video autoplay muted loop playsinline class="logo-video">
-      <source src="assets/logo-anim.mp4" type="video/mp4">
+    <video controls autoplay muted loop playsinline preload="metadata" class="logo-video">
+      <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
     <p class="slogan">BE REAL. STAY FREE.</p>
@@ -174,18 +180,27 @@
     </p>
     <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin: 40px 0;">
       <div style="text-align: center;">
-        <img src="assets/badge-dore.png" alt="Badge Individu Doré – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <img src="/assets/badge-dore.png" alt="Badge Individu Doré – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
         <p style="margin-top: 15px; font-weight: bold;">Badge Individu (Doré)</p>
       </div>
       <div style="text-align: center;">
-        <img src="assets/badge-bleu.png" alt="Badge Institution Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <img src="/assets/badge-bleu.png" alt="Badge Institution Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
         <p style="margin-top: 15px; font-weight: bold;">Badge Institution (Bleu)</p>
       </div>
       <div style="text-align: center;">
-        <img src="assets/badge-dore-bleu.png" alt="Badge Early Doré-Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
+        <img src="/assets/badge-dore-bleu.png" alt="Badge Early Doré-Bleu – Preuve d’Humanité Souveraine" style="width: 180px; border-radius: 20px;">
         <p style="margin-top: 15px; font-weight: bold;">Badge Early (Doré-Bleu)</p>
       </div>
     </div>
+  </div>
+
+  <!-- AJOUT DU LIEN WHITE PAPER -->
+  <div class="glass-card">
+    <h2 style="color: var(--gold);">White Paper</h2>
+    <p style="margin-bottom: 20px;">
+      Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
+    </p>
+    <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
   </div>
 
   <footer>
@@ -214,3 +229,6 @@
   </footer>
 </body>
 </html>
+
+
+
