@@ -37,8 +37,8 @@
       border: 1px solid rgba(247, 147, 26, 0.2);
     }
     .logo-video {
-      width: 300px;
-      max-width: 90%;
+      max-width: 320px;
+      width: 100%;
       margin-bottom: 30px;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
@@ -79,10 +79,6 @@
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(247, 147, 26, 0.6);
     }
-    .highlight {
-      color: var(--gold);
-      font-weight: 600;
-    }
     .back {
       display: block;
       margin-top: 50px;
@@ -109,22 +105,16 @@
       to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
     }
     @media (max-width: 768px) {
-      .logo-video {
-        width: 250px !important;
-      }
-      h1 {
-        font-size: 2.5rem !important;
-      }
-      .container {
-        padding: 40px 20px;
-      }
+      .logo-video { width: 250px !important; }
+      h1 { font-size: 2.5rem !important; }
+      .container { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <video autoplay muted loop playsinline class="logo-video">
-      <source src="assets/logo-anim.mp4" type="video/mp4">
+    <video controls autoplay muted loop playsinline preload="metadata" class="logo-video">
+      <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
     <h1>Commencer ta Preuve d’Âme Souveraine</h1>
@@ -138,11 +128,11 @@
 
     <h2>Le paiement</h2>
     <p>
-      Paiement obligatoire en Bitcoin Lightning pour filtrer les abus. Montant : <span class="highlight">3 € (~6000 sats – ajusté tous les 15 jours)</span>.
+      Paiement obligatoire en Bitcoin Lightning pour filtrer les abus. Montant : <span style="color: var(--gold);">3 € (~6000 sats – ajusté tous les 15 jours)</span>.
     </p>
     <p>
-      Réduction pour pays émergents / Sud global : <span class="highlight">1,5 € (~3000 sats)</span> – contacte-nous après soumission pour ajuster.<br>
-      Pour entreprises / institutions / États : <span class="highlight">sur devis</span> – contact satsoul@proton.me
+      Réduction pour pays émergents / Sud global : <span style="color: var(--gold);">1,5 € (~3000 sats)</span> – contacte-nous après soumission pour ajuster.<br>
+      Pour entreprises / institutions / États : <span style="color: var(--gold);">sur devis</span> – contact satsoul@proton.me
     </p>
 
     <h2>Prêt à commencer ?</h2>
@@ -151,6 +141,15 @@
     </p>
     <a href="TON_LIEN_TALLY_ICI" class="btn">Commencer la Preuve ⚡</a>
     <p class="note-small">Après paiement, validation manuelle – certificat sous 24h. Voir <a href="cgu.html">CGU</a> et <a href="privacy.html">Privacy</a>.</p>
+
+    <!-- AJOUT DU LIEN WHITE PAPER -->
+    <div class="glass-card">
+      <h2 style="color: var(--gold);">White Paper</h2>
+      <p style="margin-bottom: 20px;">
+        Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
+      </p>
+      <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
+    </div>
 
     <p>
       Be Real. Stay Free. 🚀
