@@ -38,8 +38,8 @@
       border: 1px solid rgba(247, 147, 26, 0.2);
     }
     .logo-video {
-      width: 300px;
-      max-width: 90%;
+      max-width: 320px;
+      width: 100%;
       margin-bottom: 30px;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
@@ -73,10 +73,6 @@
       transform: translateY(-5px);
       box-shadow: 0 20px 40px rgba(247, 147, 26, 0.6);
     }
-    .highlight {
-      color: var(--gold);
-      font-weight: 600;
-    }
     .back {
       display: block;
       margin-top: 50px;
@@ -103,22 +99,16 @@
       to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
     }
     @media (max-width: 768px) {
-      .logo-video {
-        width: 250px !important;
-      }
-      h1 {
-        font-size: 2.5rem !important;
-      }
-      .container {
-        padding: 40px 20px;
-      }
+      .logo-video { width: 250px !important; }
+      h1 { font-size: 2.5rem !important; }
+      .container { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <video autoplay muted loop playsinline class="logo-video">
-      <source src="assets/logo-anim.mp4" type="video/mp4">
+    <video controls autoplay muted loop playsinline preload="metadata" class="logo-video">
+      <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
     <h1>Livre Blanc SatoshiSoul V2.2</h1>
@@ -129,7 +119,7 @@
     Organisation : SatoshiSoul Labs (entité distribuée)<br>
     Slogan : <span class="highlight">Be Real. Stay Free.</span></p>
 
-    <a href="assets/whitepaper-v2.2.pdf" class="btn" target="_blank">Télécharger le PDF complet (FR + EN) 📄</a>
+    <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF complet (FR + EN) 📄</a>
 
     <p style="margin-top: 30px; font-size: 1.2rem;">
       Prix actuel (individus) : <span class="highlight">3 € (~6000 sats – ajusté tous les 15 jours)</span><br>
@@ -141,6 +131,15 @@
       Le White Paper complet est disponible en PDF (français + anglais).<br>
       Il détaille la vision, l'architecture, la sécurité, la gouvernance et le modèle économique.
     </p>
+
+    <!-- AJOUT DU LIEN WHITE PAPER (déjà présent, mais pour cohérence) -->
+    <div class="glass-card">
+      <h2 style="color: var(--gold);">White Paper</h2>
+      <p style="margin-bottom: 20px;">
+        Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
+      </p>
+      <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
+    </div>
 
     <a href="index.html" class="back">← Retour à l'accueil</a>
   </div>
