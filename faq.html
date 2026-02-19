@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SatoshiSoul – Faire un Don Volontaire</title>
-  <meta name="description" content="Soutiens SatoshiSoul avec un don Bitcoin Lightning. Chaque sat compte pour développer le projet open-source. Be Real. Stay Free.">
+  <title>SatoshiSoul – FAQ (Foire Aux Questions)</title>
+  <meta name="description" content="FAQ SatoshiSoul : Comment fonctionne la preuve d'humanité ? Pourquoi payer 3 € ? Est-ce sécurisé ? Be Real. Stay Free.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/petit-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/petit-logo.png">
@@ -37,8 +37,8 @@
       border: 1px solid rgba(247, 147, 26, 0.2);
     }
     .logo-video {
-      width: 300px;
-      max-width: 90%;
+      max-width: 320px;
+      width: 100%;
       margin-bottom: 30px;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
@@ -49,39 +49,21 @@
       color: var(--gold);
       margin-bottom: 40px;
     }
-    h2 {
-      font-size: 2rem;
-      color: var(--gold);
-      margin-top: 40px;
-      margin-bottom: 20px;
-      text-align: left;
-    }
-    p {
-      font-size: 1.3rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      text-align: left;
-    }
-    .qr-container {
+    .faq-item {
       background: rgba(0,0,0,0.4);
       padding: 20px;
       border-radius: 16px;
-      margin: 30px auto;
-      max-width: 300px;
+      margin: 30px 0;
+      text-align: left;
     }
-    .qr-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+    .faq-item h3 {
+      color: var(--gold);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
     }
-    .invoice {
-      background: rgba(0,0,0,0.4);
-      padding: 15px;
-      border-radius: 12px;
-      word-break: break-all;
-      font-size: 1rem;
-      margin: 20px auto;
-      max-width: 90%;
+    .faq-item p {
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
     .highlight {
       color: var(--gold);
@@ -113,56 +95,80 @@
       to   { filter: drop-shadow(0 0 35px rgba(247, 147, 26, 1)); }
     }
     @media (max-width: 768px) {
-      .logo-video {
-        width: 250px !important;
-      }
-      h1 {
-        font-size: 2.5rem !important;
-      }
-      .container {
-        padding: 40px 20px;
-      }
+      .logo-video { width: 250px !important; }
+      h1 { font-size: 2.5rem !important; }
+      .faq-item h3 { font-size: 1.3rem; }
+      .faq-item p { font-size: 1.0rem; }
+      .container { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <video autoplay muted loop playsinline class="logo-video">
-      <source src="assets/logo-anim.mp4" type="video/mp4">
+    <video controls autoplay muted loop playsinline preload="metadata" class="logo-video">
+      <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
-    <h1>Faire un Don Volontaire</h1>
+    <h1>FAQ – Foire Aux Questions</h1>
 
-    <p><strong>Dernière mise à jour : 21 décembre 2025</strong></p>
-
-    <h2>Pourquoi faire un don ?</h2>
-    <p>
-      SatoshiSoul est un projet <span class="highlight">100% communautaire et indépendant</span>. Pas de financement externe, pas de pub. Tes dons nous aident à développer le projet, ajouter des features (comme l'héritage Dead Man Switch), et offrir des preuves gratuites aux ONG et exclus.
-    </p>
-    <p>
-      Exemple : Ton don de 1000 sats aide un réfugié à prouver son humanité sans KYC.
-    </p>
-
-    <h2>Comment donner ?</h2>
-    <p>
-      Montant entièrement libre – même 1 sat compte ! Utilise Bitcoin Lightning pour instantané.
-    </p>
-
-    <div class="qr-container">
-      <img src="assets/qr-don.png" alt="QR Code pour faire un don volontaire à SatoshiSoul">
+    <div class="faq-item">
+      <h3>❓ Comment fonctionne la preuve d’âme ?</h3>
+      <p>
+        Tu filmes une vidéo de 10 secondes avec phrase aléatoire + geste. Paiement Lightning (~3 €). Nous générons un hash unique ancré sur Bitcoin. Vidéo détruite – seule la preuve mathématique reste.
+      </p>
     </div>
 
-    <div class="invoice">
-      lnbc... (colle ton invoice Lightning ici – génère-le avec ton wallet)
+    <div class="faq-item">
+      <h3>❓ Pourquoi payer 3 € ?</h3>
+      <p>
+        C’est un filtre anti-spam et anti-deepfake. Couvre frais Lightning et développement. Réduction pour pays émergents à 1,5 €. Pour entreprises/institutions : sur devis à partir de 0,70 €/vérification.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>❓ Est-ce légal et sécurisé ?</h3>
+      <p>
+        Privacy by design – aucune donnée stockée. Conformité RGPD/MiCA. Voir <a href="privacy.html">Politique de Confidentialité</a> et <a href="anti-fraud.html">Politique Anti-Fraude</a>.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>❓ Puis-je avoir plusieurs badges ?</h3>
+      <p>
+        Non – un seul badge par humain (voir <a href="anti-fraud.html">Politique Anti-Fraude</a>). Multiples = fraude → annulation.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>❓ Comment vérifier ma preuve ?</h3>
+      <p>
+        Utilise notre outil <a href="verify.html">Vérificateur</a> ou cherche ton txid sur mempool.space. C'est éternel et verifiable par tous.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>❓ Puis-je activer la signature numérique plus tard ?</h3>
+      <p>
+        Oui ! Si tu changes d’avis, contacte-nous ou utilise la page <a href="upgrade.html">Upgrade</a> (3 €). Tu auras le statut "Signer Certifié".
+      </p>
     </div>
 
     <p>
-      Scanne le QR avec n’importe quel wallet Lightning (ex : Wallet of Satoshi). Merci infiniment ❤️ !
+      Pas trouvé ta réponse ? <a href="contact.html">Contacte-nous</a>.
     </p>
 
     <p>
       Be Real. Stay Free. 🚀
     </p>
+
+    <!-- AJOUT DU LIEN WHITE PAPER -->
+    <div class="glass-card">
+      <h2 style="color: var(--gold);">White Paper</h2>
+      <p style="margin-bottom: 20px;">
+        Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
+      </p>
+      <a href="/assets/whitepaper-v2.2.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
+    </div>
 
     <a href="index.html" class="back">← Retour à l'accueil</a>
   </div>
