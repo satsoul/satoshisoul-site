@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SatoshiSoul – Livre Blanc (White Paper) V2.3</title>
-  <meta name="description" content="Livre Blanc SatoshiSoul V2.3 – Preuves d’Humanité Souveraines sur Bitcoin. Anonyme, éternel, privacy-first. Télécharge le PDF complet. Be Real. Stay Free.">
+  <title>SatoshiSoul – Livre Blanc (White Paper) V2.4</title>
+  <meta name="description" content="Livre Blanc SatoshiSoul V2.4 – Preuves d’Humanité Souveraines sur Bitcoin. Lisez-le directement ici en français et en anglais, ou téléchargez le PDF. Be Real. Stay Free.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/petit-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/petit-logo.png">
@@ -21,15 +21,13 @@
       background: var(--bg);
       color: var(--text);
       padding: 40px 20px;
-      text-align: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       background: var(--card);
       backdrop-filter: blur(16px);
@@ -49,12 +47,47 @@
       font-size: 3rem;
       color: var(--gold);
       margin-bottom: 40px;
+      text-align: center;
     }
-    p {
-      font-size: 1.3rem;
+    h2 {
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin: 60px 0 20px;
+      border-bottom: 1px solid rgba(247, 147, 26, 0.3);
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 1.7rem;
+      color: #ffaa3d;
+      margin: 50px 0 15px;
+    }
+    p, li {
+      font-size: 1.15rem;
       line-height: 1.8;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
       text-align: left;
+    }
+    ul, ol {
+      padding-left: 35px;
+      margin-bottom: 25px;
+    }
+    .section {
+      margin-bottom: 80px;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 1.3rem;
+    }
+    .lang-switch a {
+      color: var(--gold);
+      font-weight: 600;
+      margin: 0 20px;
+      text-decoration: none;
+    }
+    .lang-switch a:hover {
+      color: #ffaa3d;
+      text-decoration: underline;
     }
     .btn {
       display: inline-block;
@@ -67,7 +100,9 @@
       text-decoration: none;
       transition: all 0.4s;
       box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
-      margin: 30px 0;
+      margin: 50px auto;
+      display: block;
+      width: fit-content;
     }
     .btn:hover {
       transform: translateY(-5px);
@@ -75,24 +110,12 @@
     }
     .back {
       display: block;
-      margin-top: 50px;
+      margin-top: 60px;
       color: var(--gold);
       text-decoration: none;
       font-weight: 600;
       font-size: 1.1rem;
-    }
-    a {
-      color: #f7931a !important;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      color: #ffaa3d !important;
-      text-decoration: underline;
-      opacity: 0.9;
-    }
-    a:visited {
-      color: #e07b00 !important;
+      text-align: center;
     }
     @keyframes pulse-glow {
       from { filter: drop-shadow(0 0 15px rgba(247, 147, 26, 0.6)); }
@@ -102,6 +125,8 @@
       .logo-video { width: 250px !important; }
       h1 { font-size: 2.5rem !important; }
       .container { padding: 40px 20px; }
+      h2 { font-size: 1.8rem !important; }
+      h3 { font-size: 1.5rem !important; }
     }
   </style>
 </head>
@@ -111,34 +136,328 @@
       <source src="/assets/logo-anim.mp4" type="video/mp4">
       Ton navigateur ne supporte pas la vidéo – utilise un navigateur moderne.
     </video>
-    <h1>Livre Blanc SatoshiSoul V2.3</h1>
 
-    <p><strong>Genesis : 21 décembre 2025</strong><br>
-    <strong>Dernière mise à jour : 21 janvier 2026</strong><br>
-    Auteur : SatSoul (Anonymous Founder)<br>
-    Organisation : SatoshiSoul Labs (entité distribuée)<br>
-    Slogan : <span class="highlight">Be Real. Stay Free.</span></p>
+    <h1>Livre Blanc SatoshiSoul V2.4</h1>
 
-    <a href="/assets/whitepaper-v2.3.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF complet (FR + EN) 📄</a>
+    <div class="lang-switch">
+      <a href="#francais">Lire en Français ↓</a> • <a href="#anglais">Read in English ↓</a>
+    </div>
 
-    <p style="margin-top: 30px; font-size: 1.2rem;">
-      Prix actuel (individus) : <span class="highlight">3 € (~6000 sats – ajusté tous les 15 jours)</span><br>
-      Réduction pays émergents / Sud global : <span class="highlight">1,5 € (~3000 sats)</span><br>
-      Entreprises / institutions / États : <span class="highlight">sur devis – à partir de 0,70 €/vérification</span>
-    </p>
+    <a href="/assets/whitepaper-v2.3.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF complet (v2.4)</a>
 
-    <p style="margin-top: 40px; font-size: 1.1rem;">
-      Le White Paper complet est disponible en PDF (français + anglais).<br>
-      Il détaille la vision, l'architecture, la sécurité, la gouvernance et le modèle économique.
-    </p>
+    <!-- VERSION FRANÇAISE COMPLÈTE -->
+    <div id="francais" class="section">
+      <h2>Version Française</h2>
 
-    <!-- AJOUT DU LIEN WHITE PAPER (version 2.3) -->
-    <div class="glass-card">
-      <h2 style="color: var(--gold);">White Paper</h2>
-      <p style="margin-bottom: 20px;">
-        Télécharge le Livre Blanc pour tout savoir sur SatoshiSoul : vision, technologie, prix, roadmap, etc.
-      </p>
-      <a href="/assets/whitepaper-v2.3.pdf" class="btn" target="_blank" rel="noopener">Télécharger le PDF</a>
+      <h3>SATOSHISOUL PROTOCOL</h3>
+      <h3>LIVRE BLANC V2.4 – Genesis</h3>
+      <p>Date de Genesis : 21 décembre 2025<br>
+      Dernière mise à jour : 22 janvier 2026<br>
+      Auteur : SatSoul (Anonymous Founder)<br>
+      Organisation : SatoshiSoul Labs (entité distribuée)<br>
+      Slogan : Be Real. Stay Free.</p>
+
+      <h3>Avertissement</h3>
+      <p>Ce protocole est fourni « en l’état », sans garantie d’aucune sorte. L’utilisation est volontaire et se fait à vos propres risques.</p>
+
+      <h3>1. Résumé Exécutif</h3>
+      <p>SatoshiSoul est une plateforme souveraine permettant à toute personne ou organisation de prouver son existence réelle sur Bitcoin en 90 secondes, sans biométrie persistante ni KYC.</p>
+
+      <h3>2. Problématique</h3>
+      <p>500 millions de personnes sans identité légale (ONU 2025). L’essor des deepfakes rend les preuves classiques obsolètes. Les systèmes centralisés créent surveillance, exclusion et dépendance. Piratages massifs (ex : Viamedis/Almerys 2024, millions de citoyens français touchés) montrent les risques du stockage centralisé. Contrairement à Worldcoin ou Humanity Protocol, nous n’avons aucun stockage de données.</p>
+
+      <h3>3. Solution : Preuve d’Âme Souveraine</h3>
+      <p>4 étapes cryptographiques :</p>
+      <ul>
+        <li>Challenge Liveness : Vidéo 10s avec phrase aléatoire + geste aléatoire</li>
+        <li>Micro-transaction : Paiement via Lightning Network (6000 sats ≈ 3 €)</li>
+        <li>Hashing Client-Side : Hash unique (vidéo + phrase + paiement + timestamp + adresse). Vidéo détruite immédiatement.</li>
+        <li>Ancrage Éternel : Hash inscrit sur Bitcoin via OP_RETURN</li>
+      </ul>
+
+      <h3>3.1 Différenciation Technique</h3>
+      <p>Pour distinguer deux jumeaux identiques, notre hash combine :</p>
+      <ul>
+        <li>Empreinte faciale (DeepFace – Future Feature)</li>
+        <li>Paiement Lightning unique (timestamp milliseconde)</li>
+        <li>Phrase aléatoire prononcée (spectre vocal)</li>
+      </ul>
+      <p>Anti-deepfake : La combinaison paiement unique + timestamp milliseconde + geste aléatoire rend toute collision mathématiquement impossible sans accès aux clés privées Bitcoin.</p>
+
+      <h3>4. Fonctionnalités</h3>
+      <ul>
+        <li>Soul ID Individuel (Future Feature) : Badge orange, preuve non-transférable</li>
+        <li>Badge Organisation (Future Feature) : Badge bleu pour ONG/Entreprises</li>
+        <li>API Publique (Future Feature) : Vérification 1-clic pour tiers</li>
+        <li>Bot Telegram : @SatSoulBot pour preuves rapides</li>
+        <li>Signature Numérique (Future Feature) : Permet de prouver "c’est vraiment moi" en signant des messages avec ton wallet Bitcoin. Requiert une preuve SatoshiSoul existante (upgrade optionnel après création).</li>
+      </ul>
+
+      <h3>5. Architecture Technique & Sécurité</h3>
+      <p>Phase 1 : HTML/JS, validation manuelle assistée<br>
+      Phase 2 : Nœuds IA DeepFace open-source<br>
+      Phase 3 : API publique<br>
+      Phase 4 : Réseau de validation décentralisé</p>
+      <p>Code : 100 % open-source (MIT) sur GitHub.com/SatSoul</p>
+      <p>Sécurité & Résilience :</p>
+      <ul>
+        <li>Privacy by Design : Aucune donnée stockée.</li>
+        <li>Backup décentralisé : Site mirrored sur IPFS.</li>
+        <li>DDoS Protected by Netlify & Cloudflare.</li>
+      </ul>
+
+      <h3>6. Modèle Économique</h3>
+      <h4>6.1 Tarification Participative</h4>
+      <p>Prix public (individus standard) : 6000 sats (~3 €) – ajusté tous les 15 jours pour maintenir ~3 €</p>
+      <p>Pays émergents / Sud global : 3000 sats (~1,5 €) – réduction solidaire</p>
+      <p>ONG & Institutions / Entreprises / États : sur devis, à partir de 0,70 €/vérification (tarif dégressif pour volumes)</p>
+
+      <h4>6.2 Répartition des Revenus (60/30/10)</h4>
+      <ul>
+        <li>60 % : Frais opérationnels, IA & Développement</li>
+        <li>30 % : Récompense fondateur (plafonnée à 15 k€/mois après impôts)</li>
+        <li>10 % : Trésor Communautaire (dons votés par la communauté)</li>
+      </ul>
+
+      <h4>6.3 Stabilité des Prix & Volatilité Bitcoin</h4>
+      <p>Le montant en satoshis est ajusté tous les 15 jours (1er et 15 du mois) pour maintenir le prix cible en euro (3 € / 1,5 €). Les contrats B2B sont tarifés en Bitcoin fixe (sats) pour éviter le risque de change.</p>
+
+      <h4>6.4 Tarification pour ONG & Institutions</h4>
+      <p>Les clients institutionnels bénéficient de stabilité des prix avec des contrats tariffés exclusivement en Bitcoin fixe (montant sats). Sur devis, à partir de 0,70 €/vérification pour volumes importants.</p>
+
+      <h3>7. Gouvernance</h3>
+      <p>1 Soul ID = 1 Personne = 1 Vote</p>
+      <p>Votes trimestriels sur la blockchain pour allouer le Trésor Communautaire (10 %)</p>
+      <p>Propositions ouvertes via GitHub Issues</p>
+
+      <h3>8. Conformité & Juridiction</h3>
+      <p>Non-financier → pas de licence CASP (MiCA)</p>
+      <p>RGPD : Conforme par "Privacy by Design" (aucune donnée stockée)</p>
+      <p>Conforme aux principes du droit international des biens numériques</p>
+      <p>Russie : Entité distribuée, neutre</p>
+
+      <h3>9. Roadmap</h3>
+      <p>Q4 2025 : Lancement MVP (Site + Preuve d’âme)</p>
+      <p>Q1 2026 : Automatisation IA et Nœuds</p>
+      <p>2026 : Intégration Ordinals (Inscriptions directes sur Bitcoin L1)</p>
+
+      <h3>10. FAQ (Foire Aux Questions)</h3>
+      <p>Q1 : Comment fonctionne la preuve de vie ?<br>
+      R : Vous filmez une vidéo de 10 secondes en prononçant une phrase aléatoire. Notre IA vérifie que vous êtes un humain vivant, puis détruit la vidéo. Seul un hash cryptographique est conservé.</p>
+
+      <p>Q2 : Pourquoi payer 3 € ?<br>
+      R : C’est un filtre anti-spam et anti-deepfake. Couvre frais Lightning et développement. Réduction pour pays émergents à 1,5 €. Pour entreprises/institutions : sur devis à partir de 0,70 €/vérification.</p>
+
+      <p>Q3 : Que se passe-t-il si je meurs ?<br>
+      R : L’option "Dead Man Switch" (future) permettra de transmettre vos clés cryptographiques à un bénéficiaire après 12 mois d’inactivité.</p>
+
+      <p>Q4 : Êtes-vous conforme à la loi russe ?<br>
+      R : Oui. Nous n’émettons pas de crypto-actifs financiers, nous fournissons un service de vérification technique. Conforme à la loi 259-FZ.</p>
+
+      <p>Q5 : Puis-je vendre mon Soul ID ?<br>
+      R : Non. C’est un token "Soulbound", non transférable. C’est la garantie que chaque ID est unique et liée à un humain réel.</p>
+
+      <p>Q6 : Les institutions peuvent-elles utiliser SatoshiSoul ?<br>
+      R : Oui, sur devis. Nous proposons des tarifs dégressifs et un support dédié. Contact : satsoul@proton.me.</p>
+
+      <p>Q7 : L’IA est-elle déjà opérationnelle ?<br>
+      R : Phase 1 (janvier 2026) : Les 1000 premières vérifications sont validées manuellement par le fondateur (méthode "Wizard of Oz"). Cela permet d’entraîner le modèle avant déploiement automatique Phase 2. Transparence totale – nous préférons la qualité à la vitesse.</p>
+
+      <p>Q8 : Pourquoi pas Worldcoin ou un KYC bancaire ?<br>
+      R : Worldcoin scanne votre iris et stocke les données. Les banques vendent vos informations. SatoshiSoul ne stocke rien, ne scanne rien, et vous donnez la preuve de votre humanité sans devenir un produit.</p>
+
+      <p>Q9 : Le prix est-il accessible pour les pays pauvres ?<br>
+      R : Oui. Le prix en sats est ajusté tous les 15 jours pour rester ~3 €. Réduction à 1,5 € pour les pays émergents. Pour les ONG et États : sur devis.</p>
+
+      <p>Q10 : Puis-je ajouter la signature numérique plus tard ?<br>
+      R : Oui, mais cela requiert une preuve SatoshiSoul existante. Upgrade disponible pour 3 € (paiement Lightning). Contacte-nous ou utilise la page Upgrade.</p>
+
+      <h3>11. Charte Éthique</h3>
+      <p>Privacy First : Aucune donnée biométrique n’est stockée. La vidéo est détruite après validation.</p>
+      <p>Souveraineté Totale : L’utilisateur possède ses clés et sa preuve. Aucune dépendance tierce.</p>
+      <p>Accessibilité : Prix ajustés pour les pays émergents. Programme de subventions pour ONG.</p>
+      <p>Transparence : Code open-source, comptabilité publique, votes communautaires.</p>
+      <p>Neutralité : Aucune affiliation politique, religieuse ou commerciale.</p>
+
+      <h3>12. Mentions Légales Protectrices</h3>
+      <p>SatoshiSoul.org est un projet expérimental, open-source et indépendant. Il ne collecte aucune donnée personnelle durable, ne délivre aucun document gouvernemental officiel, et n’est affilié à aucune institution publique. L’utilisation du service implique l’acceptation des risques liés aux technologies blockchain. Service fourni « en l’état ». No liability for blockchain risks or any damages arising from use.</p>
+
+      <h3>13. Contact & Ressources</h3>
+      <p>Email : satsoul@proton.me<br>
+      X / Telegram : @satsoul<br>
+      Web : satoshisoul.org<br>
+      GitHub : github.com/SatSoul/satoshisoul-protocol<br>
+      Bot : @SatSoulBot<br>
+      Discord : discord.gg/satoshisoul</p>
+
+      <h3>14. Programme Pilote ONG</h3>
+      <p>SatoshiSoul offre un programme pilote gratuit pour les ONG et associations humanitaires :</p>
+      <ul>
+        <li>10 premières preuves d’humanité offertes par organisation</li>
+        <li>Badge bleu personnalisé pour vos bénéficiaires</li>
+        <li>Support dédié et rapports mensuels</li>
+      </ul>
+      <p>Objectif : aider les réfugiés, sans-abri, exclus à obtenir une preuve d’identité numérique souveraine sans dépendre de systèmes centralisés.</p>
+      <p>Intéressé ? Contacte-nous dès maintenant : satsoul@proton.me<br>
+      Sujet : "Programme Pilote ONG – [Nom de ton organisation]"</p>
+
+      <p>Be Real. Stay Free.<br>
+      SatoshiSoul – Preuve d’Humanité Souveraine sur Bitcoin.</p>
+    </div>
+
+    <!-- VERSION ANGLAISE COMPLÈTE -->
+    <div id="anglais" class="section">
+      <h2>English Version</h2>
+
+      <h3>SATOSHISOUL PROTOCOL</h3>
+      <h3>WHITE PAPER V2.4 – Genesis</h3>
+      <p>Genesis Date : December 21, 2025<br>
+      Last Update : January 22, 2026<br>
+      Author : SatSoul (Anonymous Founder)<br>
+      Organization : SatoshiSoul Labs (distributed entity)<br>
+      Slogan : Be Real. Stay Free.</p>
+
+      <h3>Disclaimer</h3>
+      <p>This protocol is provided "as is", without warranty of any kind. Use is voluntary and at your own risk.</p>
+
+      <h3>1. Executive Summary</h3>
+      <p>SatoshiSoul is a sovereign platform allowing any person or organization to prove real human existence on Bitcoin in 90 seconds, without persistent biometrics or KYC.</p>
+
+      <h3>2. Problem Statement</h3>
+      <p>500 million people lack legal identity (UN 2025). Deepfakes make classic proofs obsolete. Centralized systems create surveillance, exclusion and dependency. Massive institutional hacks (e.g. France 2024 Viamedis/Almerys, millions of citizens affected) show risks of centralized storage. Unlike Worldcoin or Humanity Protocol, we have no data storage.</p>
+
+      <h3>3. Solution : Sovereign Soul Proof</h3>
+      <p>4 cryptographic steps :</p>
+      <ul>
+        <li>Liveness Challenge : 10s video with random phrase + random gesture</li>
+        <li>Micro-transaction : Lightning Network payment (6000 sats ≈ 3 €)</li>
+        <li>Client-Side Hashing : Unique hash (video + phrase + payment + timestamp + address). Video deleted immediately.</li>
+        <li>Eternal Anchoring : Hash inscribed on Bitcoin via OP_RETURN</li>
+      </ul>
+
+      <h3>3.1 Technical Differentiation</h3>
+      <p>For identical twins : Face embedding (DeepFace – Future Feature), unique Lightning payment (millisecond timestamp), spoken random phrase (vocal spectrum).</p>
+      <p>Anti-deepfake : Combination of unique payment + millisecond timestamp + random gesture makes collision mathematically impossible without private key access.</p>
+
+      <h3>4. Features</h3>
+      <ul>
+        <li>Individual Soul ID (Future Feature) : Orange badge, non-transferable proof</li>
+        <li>Organization Badge (Future Feature) : Blue badge for NGOs/Companies</li>
+        <li>Public API (Future Feature) : 1-click verification for third parties</li>
+        <li>Telegram Bot : @SatSoulBot for quick proofs</li>
+        <li>Digital Signature (Future Feature) : Allows proving "it's really me" by signing messages with your Bitcoin wallet. Requires an existing SatoshiSoul proof (optional upgrade after creation).</li>
+      </ul>
+
+      <h3>5. Technical Architecture & Security</h3>
+      <p>Phase 1 : HTML/JS, assisted manual validation</p>
+      <p>Phase 2 : Open-source DeepFace AI nodes</p>
+      <p>Phase 3 : Public API</p>
+      <p>Phase 4 : Decentralized validation network</p>
+      <p>Code : 100% open-source (MIT) on GitHub.com/SatSoul</p>
+      <p>Security & Resilience :</p>
+      <ul>
+        <li>Privacy by Design : No data stored.</li>
+        <li>Decentralized backup : Site mirrored on IPFS.</li>
+        <li>DDoS Protected by Netlify & Cloudflare.</li>
+      </ul>
+
+      <h3>6. Economic Model</h3>
+      <h4>6.1 Participative Pricing</h4>
+      <p>Public price (standard individuals) : 6000 sats (~3 €) – adjusted every 15 days to maintain ~3 €</p>
+      <p>Emerging countries / Global South : 3000 sats (~1.5 €) – solidarity discount</p>
+      <p>NGOs & Institutions / Companies / States : on quote, starting at 0.70 €/verification (volume discounts)</p>
+
+      <h4>6.2 Revenue Split (60/30/10)</h4>
+      <ul>
+        <li>60 % : Operational costs, AI & Development</li>
+        <li>30 % : Founder reward (capped at 15 k€/month after taxes)</li>
+        <li>10 % : Community Treasury (voted by community)</li>
+      </ul>
+
+      <h4>6.3 Price Stability & Bitcoin Volatility</h4>
+      <p>Sats amount adjusted every 15 days (1st and 15th of each month) to target the euro price (3 € / 1.5 €). B2B contracts priced in fixed Bitcoin (sats amount) to avoid exchange risk.</p>
+
+      <h4>6.4 NGO & Institution Pricing</h4>
+      <p>Institutional clients (companies, states, NGOs) benefit from price stability with contracts priced exclusively in fixed Bitcoin (sats amount). On quote, starting at 0.70 €/verification for large volumes.</p>
+
+      <h3>7. Governance</h3>
+      <p>1 Soul ID = 1 Person = 1 Vote</p>
+      <p>Quarterly on-chain votes to allocate Community Treasury (10 %)</p>
+      <p>Open proposals via GitHub Issues</p>
+
+      <h3>8. Compliance & Jurisdiction</h3>
+      <p>Non-financial → no CASP license (MiCA)</p>
+      <p>GDPR : Compliant via "Privacy by Design" (no data stored)</p>
+      <p>Compliant with international digital assets law principles</p>
+      <p>Russia : Distributed entity, neutral</p>
+
+      <h3>9. Roadmap</h3>
+      <p>Q4 2025 : MVP Launch (Site + Soul Proof)</p>
+      <p>Q1 2026 : AI & Nodes Automation</p>
+      <p>2026 : Ordinals Integration (Direct Inscriptions on Bitcoin L1)</p>
+
+      <h3>10. FAQ (Summary)</h3>
+      <p>Q1 : How does the liveness proof work ?<br>
+      A : Record a 10-second video saying a random phrase. AI verifies you are living human, deletes video. Only cryptographic hash kept.</p>
+
+      <p>Q2 : Why pay 6000 sats ?<br>
+      A : Covers AI compute and Lightning fees. Economic anti-spam filter. Emerging countries get reduced price at 1.5 €. Institutions : on quote from 0.70 €.</p>
+
+      <p>Q3 : What happens if I die ?<br>
+      A : Future "Dead Man Switch" transmits keys or message to beneficiaries after 12 months inactivity.</p>
+
+      <p>Q4 : Are you compliant with Russian law ?<br>
+      A : Yes. We do not issue financial crypto-assets, we provide a technical verification service. Compliant with law 259-FZ.</p>
+
+      <p>Q5 : Can I sell my Soul ID ?<br>
+      A : No. It is a "Soulbound" token, non-transferable. This guarantees each ID is unique and tied to a real human.</p>
+
+      <p>Q6 : Can institutions use SatoshiSoul ?<br>
+      A : Yes, on quote. We offer tiered pricing and dedicated support. Contact : satsoul@proton.me.</p>
+
+      <p>Q7 : Is the AI already operational ?<br>
+      A : Phase 1 (January 2026) : First 1000 verifications manually validated by founder ("Wizard of Oz" method). This trains the model before automatic Phase 2 deployment. Full transparency – quality over speed.</p>
+
+      <p>Q8 : Why not Worldcoin or bank KYC ?<br>
+      A : Worldcoin scans iris and stores data. Banks sell your info. SatoshiSoul stores nothing, scans nothing, and gives you proof of humanity without becoming a product.</p>
+
+      <p>Q9 : Is the price affordable for poor countries ?<br>
+      A : Yes. Sats price adjusted every 15 days to stay ~3 €. Reduced to 1.5 € for emerging countries. NGOs / States : on quote.</p>
+
+      <p>Q10 : Can I add the digital signature later ?<br>
+      A : Yes, but it requires an existing SatoshiSoul proof. Upgrade available for 3 € (Lightning payment). Contact us or use the Upgrade page.</p>
+
+      <h3>11. Ethical Charter</h3>
+      <p>Privacy First : No biometric data stored. Video deleted after validation.</p>
+      <p>Total Sovereignty : User owns keys and proof. No third-party dependency.</p>
+      <p>Accessibility : Prices adjusted for emerging countries. NGO subsidy program.</p>
+      <p>Transparency : Open-source code, public accounting, community votes.</p>
+      <p>Neutrality : No political, religious or commercial affiliation.</p>
+
+      <h3>12. Protective Legal Notices</h3>
+      <p>SatoshiSoul.org is an experimental, open-source and independent project. It collects no persistent personal data, issues no official government document, and is not affiliated with any public institution. Use implies acceptance of blockchain technology risks. Service provided "as is". No liability for blockchain risks or any damages arising from use.</p>
+
+      <h3>13. Contact & Resources</h3>
+      <p>Email : satsoul@proton.me<br>
+      X / Telegram : @satsoul<br>
+      Web : satoshisoul.org<br>
+      GitHub : github.com/SatSoul/satoshisoul-protocol<br>
+      Bot : @SatSoulBot<br>
+      Discord : discord.gg/satoshisoul</p>
+
+      <h3>14. NGO Pilot Program</h3>
+      <p>SatoshiSoul offers a free pilot program for NGOs and humanitarian organizations :</p>
+      <ul>
+        <li>10 first proofs of humanity offered per organization</li>
+        <li>Custom blue badge for your beneficiaries</li>
+        <li>Dedicated support and monthly reports</li>
+      </ul>
+      <p>Goal : Help refugees, homeless, excluded people obtain a sovereign digital identity without centralized systems.</p>
+      <p>Interested ? Contact us now : satsoul@proton.me<br>
+      Subject : "NGO Pilot Program – [Your Organization Name]"</p>
+
+      <p>Be Real. Stay Free.<br>
+      SatoshiSoul – Sovereign Proof of Humanity on Bitcoin.</p>
     </div>
 
     <a href="index.html" class="back">← Retour à l'accueil</a>
